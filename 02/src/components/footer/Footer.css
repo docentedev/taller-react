@@ -1,0 +1,12 @@
+.footer {
+    background-color: aliceblue;
+}
+
+.footer .footer__list a {
+    background-color: aliceblue;
+    color: darkgray;
+}
+
+.footer .footer__list a.active {
+    color: cornflowerblue;
+}
