@@ -1,0 +1,11 @@
+.input {
+    width: 400px;
+}
+
+.input label {}
+
+.input input {
+    width: 100%;
+    border: solid 1px red;
+    height: 35px;
+}
