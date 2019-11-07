@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getAllStartActionAsyncCreator } from '../../store/modules/user/actions';
 
 import AlertInfo from '../../components/alert-info/AlertInfo';
-
+import DisplayName from '../../components/display-name/DisplayName';
 
 const Dashboard = () => {
     const users = useSelector(store => store.users);
@@ -21,7 +21,7 @@ const Dashboard = () => {
         
         <ul>
             {users.data.map(user => (
-                <li key={user.id}>{user.name}</li>
+                <DisplayName key={user.id} name={user.name} />
             ))}
         </ul>
     </div>);
