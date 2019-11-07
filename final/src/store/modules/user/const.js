@@ -1,0 +1,3 @@
+export const USER_GETALL_START = 'USERS/GETALL/START';
+export const USER_GETALL_OK = 'USERS/GETALL/OK';
+export const USER_GETALL_NOK = 'USERS/GETALL/NOK';

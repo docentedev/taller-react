@@ -16,7 +16,8 @@ function App() {
       <Router>
       <div className="App">
         <Route exact path="/" component={Home} />
-        <PrivateRoute path="/private" component={Dashboard} />
+        <PrivateRoute exact path="/private" component={Dashboard} />
+        <PrivateRoute path="/private/:id" component={Dashboard} />
       </div>
       </Router>
     </Provider>

@@ -5,6 +5,6 @@ export const getAll = () => {
                 id: 2,
                 name: 'Patricia'
             }]);
-        }, 1000);
+        }, 2000);
     });
 };

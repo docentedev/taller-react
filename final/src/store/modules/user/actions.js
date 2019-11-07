@@ -1,22 +1,28 @@
+import {
+    USER_GETALL_NOK,
+    USER_GETALL_OK,
+    USER_GETALL_START
+} from './const';
+
 import { getAll } from '../../../client/user';
 
 const getAllStartActionCreator = () => {
     return {
-        type: 'USERS/GETALL/START',
-        payload: '',
+        type: USER_GETALL_START,
+        payload: null,
     };
 };
 
 const getAllOKActionCreator = (data) => {
     return {
-        type: 'USERS/GETALL/OK',
+        type: USER_GETALL_OK,
         payload: data,
     };
 };
 
 const getAllNOKActionCreator = (err) => {
     return {
-        type: 'USERS/GETALL/NOK',
+        type: USER_GETALL_NOK,
         payload: err,
     };
 };
@@ -24,10 +30,12 @@ const getAllNOKActionCreator = (err) => {
 export const getAllStartActionAsyncCreator = () => {
     return (dispatch, getState) => {
         dispatch(getAllStartActionCreator());
-        getAll().then(data => {
-            dispatch(getAllOKActionCreator(data));
-        }).catch(err => {
-            dispatch(getAllNOKActionCreator(err));
-        })
+        getAll()
+            .then(data => {
+                dispatch(getAllOKActionCreator(data));
+            })
+            .catch(err => {
+                dispatch(getAllNOKActionCreator(err));
+            })
     }
 };
